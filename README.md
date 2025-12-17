@@ -8,7 +8,7 @@ The site is organized by type:
 
 - `index.html` - Lightweight redirect to the main homepage under `pages/`
 - `pages/` - HTML entry points: `index.html`, `publications.html`, `teaching.html`, `people.html`
-- `css/` - Stylesheets (e.g., `styles-new.css`, `slideshow.css`, `nav-fix.css`)
+- `css/` - Stylesheets (e.g., `styles-new.css`, `slideshow.css`)
 - `js/` - JavaScript for interactive elements
 - `assets/images/` - Images used across the site
 - Navbar is injected by `js/navbar.js` into any page that has `<header data-nav>`.
@@ -41,5 +41,4 @@ The website is compatible with modern browsers:
 ## Local Development
 
 To view the website locally, simply open any HTML file in a web browser. For more advanced development, you can use a local server.
-
 
