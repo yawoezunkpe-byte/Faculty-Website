@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching - Professor Name</title>
-    <link rel="stylesheet" href="css/styles-new.css">
+    <title>Teaching - Dr. Yawo Ezunkpe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles-new.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- MathJax for LaTeX rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!-- OmniCMS meta tags -->
-    <meta name="omnicms:title" content="Teaching - Professor Name">
-    <meta name="omnicms:description" content="Courses taught by Professor Name">
+    <meta name="omnicms:title" content="Teaching - Dr. Yawo Ezunkpe">
+    <meta name="omnicms:description" content="Courses taught by Dr. Yawo Ezunkpe">
 </head>
 <body>
     <!-- Space Background -->
@@ -23,16 +23,7 @@
     <div class="contrail"></div>
     <div class="contrail"></div>
     <div class="site-wrapper">
-    <header>
-        <nav class="main-navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="teaching.html" class="active">Teaching</a></li>
-                <li><a href="people.html">People</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header data-nav></header>
 
     <!-- Inspirational Quote Section -->
     <div class="quote-overlay">
@@ -88,61 +79,21 @@
     </main>
 
     <style>
-        .course-item {
-            margin-bottom: 2.5rem;
-        }
-        
-        .course-item h3 {
-            margin-bottom: 0.5rem;
-            color: #333;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .course-item p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        
-        .office-hours-section {
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .simple-list {
-            list-style: none;
-            padding-left: 0;
-            margin-top: 1rem;
-        }
-        
-        .simple-list li {
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-        
-        h1 {
-            color: #800020;
-            margin-bottom: 1.5rem;
-        }
-        
-        h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        a {
-            color: #800020;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
+        .course-item { margin-bottom: 2.5rem; }
+        .course-item h3 { margin-bottom: 0.5rem; color: #333; font-size: 1.1rem; font-weight: 600; }
+        .course-item p { margin: 0.5rem 0; font-size: 0.95rem; line-height: 1.5; }
+        .office-hours-section { margin-top: 3rem; margin-bottom: 2rem; }
+        .simple-list { list-style: none; padding-left: 0; margin-top: 1rem; }
+        .simple-list li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+        h1 { color: #800020; margin-bottom: 1.5rem; }
+        h2 { margin-top: 2rem; margin-bottom: 1rem; color: #333; }
+        a { color: #800020; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 
-    <script src="js/main.js"></script>
     </div>
+    
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>

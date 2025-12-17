@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Professor Yawo Ezunkpe</title>
-    <link rel="stylesheet" href="css/styles-new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="../css/styles-new.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- OmniCMS meta tags -->
     <meta name="omnicms:title" content="Publications - Professor Yawo Ezunkpe">
     <meta name="omnicms:description" content="Academic publications by Professor Yawo Ezunkpe">
     <!-- MathJax for LaTeX rendering -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -22,16 +24,7 @@
     <div class="contrail"></div>
     <div class="contrail"></div>
     <div class="site-wrapper">
-    <header>
-        <nav class="main-navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html" class="active">Publications</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="people.html">People</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header data-nav></header>
 
     <!-- Inspirational Quote Section -->
     <div class="quote-overlay">
@@ -81,11 +74,9 @@
             </div>
         </div>
     </main>
-
-
-
-    <script src="js/main.js"></script>
     </div>
-   
+    
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>

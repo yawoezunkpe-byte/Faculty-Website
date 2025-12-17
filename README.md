@@ -4,16 +4,14 @@ This is a static faculty website template designed to be managed with OmniCMS. T
 
 ## Structure
 
-The website consists of the following files and directories:
+The site is organized by type:
 
-- `index.html` - Homepage with professor information
-- `research.html` - Research projects and interests
-- `teaching.html` - Courses taught and teaching philosophy
-- `publications.html` - Academic publications
-- `contact.html` - Contact information and form
-- `css/styles.css` - Stylesheet for the website
-- `js/main.js` - JavaScript for interactive elements
-- `images/` - Directory for storing images
+- `index.html` - Lightweight redirect to the main homepage under `pages/`
+- `pages/` - HTML entry points: `index.html`, `publications.html`, `teaching.html`, `people.html`
+- `css/` - Stylesheets (e.g., `styles-new.css`, `slideshow.css`, `nav-fix.css`)
+- `js/` - JavaScript for interactive elements
+- `assets/images/` - Images used across the site
+- Navbar is injected by `js/navbar.js` into any page that has `<header data-nav>`.
 
 ## Customization
 
@@ -43,7 +41,5 @@ The website is compatible with modern browsers:
 ## Local Development
 
 To view the website locally, simply open any HTML file in a web browser. For more advanced development, you can use a local server.
-
-
 
 

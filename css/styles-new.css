@@ -24,8 +24,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    /*background: url('../images/Background.png') no-repeat center center fixed;*/
-    background: url('../images/Background13.png') no-repeat center center fixed;
+    /*background: url('../assets/images/Background.png') no-repeat center center fixed;*/
+    background: url('../assets/images/Background13.png') no-repeat center center fixed;
     background-position-y: -70px;
 
     /*background-color: #001F3F;*/
