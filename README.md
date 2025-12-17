@@ -28,13 +28,6 @@ Each page contains multiple editable regions marked with:
 </div>
 ```
 
-### OmniCMS Meta Tags
-
-Each page includes OmniCMS meta tags for SEO and content management:
-```html
-<meta name="omnicms:title" content="Page Title">
-<meta name="omnicms:description" content="Page Description">
-```
 
 ## Customization
 
