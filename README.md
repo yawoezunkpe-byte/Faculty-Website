@@ -15,20 +15,6 @@ The website consists of the following files and directories:
 - `js/main.js` - JavaScript for interactive elements
 - `images/` - Directory for storing images
 
-## OmniCMS Integration
-
-This website template is designed to work with OmniCMS with the following features:
-
-### Editable Regions
-
-Each page contains multiple editable regions marked with:
-```html
-<div class="omnicms-editable" data-identifier="unique-identifier">
-    <!-- Content that can be edited in OmniCMS -->
-</div>
-```
-
-
 ## Customization
 
 To customize this template for a specific professor:
