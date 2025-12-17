@@ -52,8 +52,4 @@ To deploy this website:
 2. Configure OmniCMS to manage the website
 3. Set up the appropriate permissions in OmniCMS
 
-## Credits
 
-- Font Awesome for icons
-- Google Fonts for typography
-- Created for [University Name]
