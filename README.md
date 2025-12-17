@@ -44,12 +44,6 @@ The website is compatible with modern browsers:
 
 To view the website locally, simply open any HTML file in a web browser. For more advanced development, you can use a local server.
 
-## Deployment
 
-To deploy this website:
-
-1. Upload all files to your web server
-2. Configure OmniCMS to manage the website
-3. Set up the appropriate permissions in OmniCMS
 
 
