@@ -90,7 +90,45 @@ body {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.main-navigation ul {
+.main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.main-navigation .nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.main-navigation .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: #475569;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.main-navigation .nav-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.main-navigation .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.main-navigation .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.main-navigation ul,
+.main-navigation .nav-links {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -1285,14 +1323,40 @@ section h2::after {
         padding: 0 15px;
     }
     
-    .main-navigation ul {
+    .main-navigation {
+        justify-content: space-between;
+        padding: 10px 20px;
         flex-wrap: wrap;
+    }
+    
+    .main-navigation .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
         justify-content: center;
-        padding: 15px 0;
+        align-items: center;
+    }
+    
+    .main-navigation .nav-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        display: none;
+        padding: 10px 0 5px;
+    }
+    
+    .main-navigation .nav-links.open {
+        display: flex;
     }
     
     .main-navigation li {
-        margin: 5px 10px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .main-navigation a {
+        display: block;
+        padding: 12px;
+        width: 100%;
     }
     
     .pde-top-right {
@@ -1351,5 +1415,32 @@ section h2::after {
     
     .site-quote blockquote {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-content {
+        padding: 0 12px;
+    }
+    
+    .quote-overlay {
+        padding: 20px 12px;
+    }
+    
+    .education-timeline {
+        gap: 12px;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .professor-card {
+        margin: 0 10px;
     }
 }
