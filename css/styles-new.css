@@ -80,7 +80,7 @@ body {
 }
 
 /* Navigation */
-.main-navigation {
+.main-navigation:not(.nav-floating) {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -92,7 +92,7 @@ body {
     backdrop-filter: none;
 }
 
-.main-navigation .nav-toggle {
+.main-navigation:not(.nav-floating) .nav-toggle {
     display: none;
     background: transparent;
     border: none;
@@ -101,7 +101,7 @@ body {
     cursor: pointer;
 }
 
-.main-navigation .nav-toggle span {
+.main-navigation:not(.nav-floating) .nav-toggle span {
     display: block;
     width: 24px;
     height: 2px;
@@ -110,19 +110,19 @@ body {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.main-navigation .nav-toggle.open span:nth-child(1) {
+.main-navigation:not(.nav-floating) .nav-toggle.open span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
 
-.main-navigation .nav-toggle.open span:nth-child(2) {
+.main-navigation:not(.nav-floating) .nav-toggle.open span:nth-child(2) {
     opacity: 0;
 }
 
-.main-navigation .nav-toggle.open span:nth-child(3) {
+.main-navigation:not(.nav-floating) .nav-toggle.open span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-.main-navigation .nav-links {
+.main-navigation:not(.nav-floating) .nav-links {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -137,11 +137,11 @@ body {
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.main-navigation li {
+.main-navigation:not(.nav-floating) li {
     margin: 0;
 }
 
-.main-navigation a {
+.main-navigation:not(.nav-floating) a {
     color: #e2e8f0;
     text-decoration: none;
     font-weight: 500;
@@ -152,12 +152,12 @@ body {
     position: relative;
 }
 
-.main-navigation a:hover,
-.main-navigation a.active {
+.main-navigation:not(.nav-floating) a:hover,
+.main-navigation:not(.nav-floating) a.active {
     color: #ffffff;
 }
 
-.main-navigation a::after {
+.main-navigation:not(.nav-floating) a::after {
     content: '';
     position: absolute;
     left: 12px;
@@ -170,8 +170,8 @@ body {
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.main-navigation a.active::after,
-.main-navigation a:hover::after {
+.main-navigation:not(.nav-floating) a.active::after,
+.main-navigation:not(.nav-floating) a:hover::after {
     opacity: 1;
     transform: scaleX(1);
 }
