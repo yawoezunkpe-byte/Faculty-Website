@@ -176,6 +176,169 @@ body {
     transform: scaleX(1);
 }
 
+/* Floating badge nav */
+.main-navigation.nav-floating {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 140;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.nav-fab {
+    pointer-events: auto;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: radial-gradient(circle at 30% 30%, #3b82f6, #1e3a8a);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-fab:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.35);
+}
+
+.nav-initials {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+.nav-burger {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-burger span {
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: #e2e8f0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-fab.open .nav-burger span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-fab.open .nav-burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-fab.open .nav-burger span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.main-navigation.nav-floating .nav-links {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+    height: 240px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.main-navigation.nav-floating .nav-links li {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.main-navigation.nav-floating .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(12, 20, 38, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    min-width: 150px;
+}
+
+.main-navigation.nav-floating .nav-links a i {
+    color: #60a5fa;
+    width: 20px;
+    text-align: center;
+}
+
+.main-navigation.nav-floating .nav-links a:hover,
+.main-navigation.nav-floating .nav-links a.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+
+.main-navigation.nav-floating .nav-links a.active i {
+    color: #93c5fd;
+}
+
+.main-navigation.nav-floating.open .nav-links {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.main-navigation.nav-floating.open .nav-links li:nth-child(1) {
+    transform: translate(90px, -10px) scale(1);
+    opacity: 1;
+}
+
+.main-navigation.nav-floating.open .nav-links li:nth-child(2) {
+    transform: translate(150px, 60px) scale(1);
+    opacity: 1;
+}
+
+.main-navigation.nav-floating.open .nav-links li:nth-child(3) {
+    transform: translate(110px, 140px) scale(1);
+    opacity: 1;
+}
+
+.main-navigation.nav-floating.open .nav-links li:nth-child(4) {
+    transform: translate(20px, 170px) scale(1);
+    opacity: 1;
+}
+
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 110;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.nav-open {
+    overflow: hidden;
+}
 /* Quote Section */
 .site-quote {
     text-align: center;
@@ -1341,13 +1504,13 @@ section h2::after {
         padding: 0 15px;
     }
     
-    .main-navigation {
+    .main-navigation:not(.nav-floating) {
         justify-content: space-between;
         padding: 10px 16px;
         flex-wrap: wrap;
     }
     
-    .main-navigation .nav-toggle {
+    .main-navigation:not(.nav-floating) .nav-toggle {
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
@@ -1359,7 +1522,7 @@ section h2::after {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
     
-    .main-navigation .nav-links {
+    .main-navigation:not(.nav-floating) .nav-links {
         width: 100%;
         flex-direction: column;
         gap: 6px;
@@ -1369,16 +1532,16 @@ section h2::after {
         border-radius: 16px;
     }
     
-    .main-navigation .nav-links.open {
+    .main-navigation:not(.nav-floating) .nav-links.open {
         display: flex;
     }
     
-    .main-navigation li {
+    .main-navigation:not(.nav-floating) li {
         margin: 0;
         text-align: center;
     }
     
-    .main-navigation a {
+    .main-navigation:not(.nav-floating) a {
         display: block;
         padding: 12px;
         width: 100%;
