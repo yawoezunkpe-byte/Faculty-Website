@@ -1,6 +1,6 @@
 # Faculty Website Template
 
-This is a static faculty website template designed to be managed with OmniCMS. The website includes pages for a professor's home/about, research, teaching, publications, and contact information.
+This is a static faculty website designed to be managed with OmniCMS. The website includes pages for a professor's home/about, research, teaching, publications, and contact information.
 
 ## Structure
 
